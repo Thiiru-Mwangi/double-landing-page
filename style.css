@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+
+}
+
+h1{
+    font-size: 2.5rem;
+    backdrop-filter: brightness(67%);
+    letter-spacing: 1px;
+    margin-bottom: 15rem;
+    white-space: nowrap;
+}
+
+.btn{
+    background-color: #020202;
+    color: whitesmoke;
+    padding: .67rem 1rem;
+    font-size: 1.3rem;
+    border: 4px solid;
+    cursor: pointer;
+    transition: background-color .2s ease;
+    border-radius: .5rem;
+    white-space: nowrap;
+}
+
+.btn:hover{
+    background-color: whitesmoke;
+    color: #020202;
+}
+
+.split{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+}
+
+.split.left{
+    position: absolute;
+    left: 0;
+    background-color: #d8f1a0;
+    background-image: url("image1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.split.right{
+    position: absolute;
+    right: 0;
+    background-color: #00a878;
+    background-image: url("image2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.active-right .left{
+    width: 25%;
+}
+
+.active-right .right{
+    width: 75%;
+}
+
+.active-left .right{
+    width: 25%;
+}
+
+.active-left .left{
+    width: 75%;
+}
+
+.right, .left{
+    transition: width 1s ease;
+}
